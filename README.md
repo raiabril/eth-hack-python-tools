@@ -1,4 +1,4 @@
-# eth-hack-python-tools
+# Ethical Hacking Python tools
 
 Ethical hacking and pentesting tools written in Python.
 
