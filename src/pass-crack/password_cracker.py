@@ -1,4 +1,11 @@
+#!/usr/bin/env python3
 
+"""
+Password cracker SHA1
+
+Author: Rai (grx6@naosinfosec.com)
+
+"""
 import hashlib
 
 def calculate_hash(word) -> str:
