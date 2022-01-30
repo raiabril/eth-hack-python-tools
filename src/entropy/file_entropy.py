@@ -7,7 +7,7 @@ Calculate the entropy of a set of files and provide the highest.
 
 """
 
-#TODO
+#TODO Improve the file
 
 #
 # graph_file_entropy.py 
