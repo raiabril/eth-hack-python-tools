@@ -1,14 +1,9 @@
 """
-    Port scanner
-    ================================================================
+Port scanner
 
-    This tool will run a port scan in the given target and port range.
+This tool will run a port scan in the given target and port range.
 
-    It's part of the Information Security Module in [freecodecamp.org](https://www.freecodecamp.org/learn/information-security/i)
-
-    Developed by Rai
-    rai@ingmechs.com
-
+Author: Rai
 """
 
 

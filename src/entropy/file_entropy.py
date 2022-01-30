@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 """
+File entropy
+
 Calculate the entropy of a set of files and provide the highest.
 
 """
