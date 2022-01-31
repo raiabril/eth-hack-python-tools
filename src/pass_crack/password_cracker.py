@@ -42,7 +42,7 @@ def crack_sha1_hash(hash, use_salts=False):
   """
 
   # Open the passwords file a single time
-  with open("top-10000-passwords.txt", 'r') as pass_file:
+  with open("wordlists/top-10000-passwords.txt", 'r') as pass_file:
     passwords = pass_file.readlines()
     passwords = [password.strip('\n') for password in passwords]
 
@@ -61,7 +61,7 @@ def crack_sha1_hash(hash, use_salts=False):
   else:
 
     # Open salt file a single time
-    with open('known-salts.txt', 'r') as salt_file:
+    with open('wordlists/known-salts.txt', 'r') as salt_file:
       salt_list = salt_file.readlines()
       salt_list = [salt.strip('\n') for salt in salt_list]
 
