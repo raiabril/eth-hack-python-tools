@@ -4,7 +4,7 @@ NMAP automation tool
 
 This script is usin the python-nmap package to automate scan.
 
-Author: Rai
+
 """
 
 import nmap
