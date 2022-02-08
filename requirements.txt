@@ -5,3 +5,5 @@ python-nmap
 pandas
 pycrypto
 exif
+wxPython==4.1.1
+pyautogui
