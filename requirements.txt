@@ -7,3 +7,4 @@ pycrypto
 exif
 scapy
 beautifulsoup4
+requests
