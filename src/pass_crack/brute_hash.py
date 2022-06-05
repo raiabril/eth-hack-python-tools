@@ -13,7 +13,7 @@ def try_open(wordlist):
             pass_file = open(wordlist, 'r')
         lines = pass_file.readlines()
         lines = [line.decode("utf-8", errors='ignore').strip('\n')
-                 for line in lines]
+                for line in lines]
         pass_file.close()
         return lines
 
