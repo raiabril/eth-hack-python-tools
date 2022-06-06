@@ -39,7 +39,7 @@ def main():
                                                         stderr=subprocess.STDOUT, shell=True)
     change_mac_address(interface, new_mac_address)
     after_change_mac_address = subprocess.check_output("ifconfig " + interface,
-                                                       stderr=subprocess.STDOUT, shell=True)
+                                                    stderr=subprocess.STDOUT, shell=True)
 
     if before_change_mac_address == after_change_mac_address:
         print(
