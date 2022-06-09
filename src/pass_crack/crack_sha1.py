@@ -33,5 +33,7 @@ for password in lines:
     if hash_guess.hexdigest() == value:
         print(colored(f"[+] Password found: {password}", "green"))
         exit()
+    else:
+        print(colored(f"[!!] Incorrect password: {password}", "yellow"))
 
 print(colored("[-] Password not found", "red"))
