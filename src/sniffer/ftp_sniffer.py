@@ -28,8 +28,11 @@ def ftp_sniffer(packet):
         password = re.findall('(?i)PASS (.*)', raw)
 
         if user:
-            print(f"[+] Detected FTP login to {ip_dst} from {ip_src} with username: {user[0]} and password: {password[0]}")
-
+            print(f"[+] Detected FTP login to {ip_dst} from {ip_src}")
+            print("[+] Username: " , user[0].replace("\\r\\n'", ''))
+        
+        if password:
+            print("[+] Password: ", password[0].replace("\\r\\n'", ''))
 
 def main():
     parser = optparse.OptionParser('Usage: python3 ftp_sniffer.py <interface>')
