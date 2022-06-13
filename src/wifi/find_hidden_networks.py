@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """
-find_hidden_networks.py
-
-Find hidden networks in the area with the SSID hidden.
+find_hidden_networks.py - Find hidden networks in the area with the SSID hidden.
 
 Usage: sudo python3 find_hidden_networks.py
 

