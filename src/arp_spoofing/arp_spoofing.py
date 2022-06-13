@@ -32,7 +32,7 @@ def request_mac_address(ip):
     arp_request_broadcast = broadcast / arp_request
     answered_list = scapy.srp(
         arp_request_broadcast,
-        timeout=2, verbose=False)[0]
+        timeout=5, verbose=False)[0]
 
     try:
         answer = answered_list[0][1].hwsrc
