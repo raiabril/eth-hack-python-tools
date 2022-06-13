@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-brute-form.py
+brute_forms.py
 
 Script to perform a brute force attack on a web form.
 The application we are attacking is a wordpress site.
