@@ -31,4 +31,3 @@ with open(pass_file) as f:
             break  # Stop the loop if the password is found
         else:
             print('[-] Password not found: ' + password)
-            continue  # Continue the loop if the password is not found
