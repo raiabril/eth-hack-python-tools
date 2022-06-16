@@ -10,3 +10,4 @@ beautifulsoup4
 requests
 termcolor
 scapy_http
+pyfiglet
