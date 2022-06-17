@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 
 """
-discover-subdomains.py
-
-This script allows to discover subdomains of a given domain.
+discover-subdomains.py - This script allows to discover subdomains of a given domain.
 
 Usage: python3 discover-subdomains.py <domain>
 
