@@ -3,7 +3,6 @@ autopep8
 flake8
 python-nmap
 pandas
-pycrypto
 exif
 scapy
 beautifulsoup4
