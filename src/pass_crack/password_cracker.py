@@ -3,7 +3,7 @@
 """
 Password cracker SHA1
 
-Author: Rai (grx6@naosinfosec.com)
+Author: @raiabril
 
 """
 import hashlib

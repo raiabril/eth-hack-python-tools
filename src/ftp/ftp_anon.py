@@ -5,7 +5,7 @@ FTP Anonymous
 
 This script allows to perform an anonymous login attack in an vulnerable FTP server.
 
-Author: Rai
+Author: @raiabril
 
 """
 

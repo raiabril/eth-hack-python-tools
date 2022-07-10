@@ -5,7 +5,7 @@ FTP Brute force
 
 This script allows you to brute force an FTP server to login.
 
-Author: Rai
+Author: @raiabril
 
 """
 

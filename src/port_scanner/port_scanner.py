@@ -3,7 +3,7 @@ Port scanner
 
 This tool will run a port scan in the given target and port range.
 
-Author: Rai
+Author: @raiabril
 """
 
 

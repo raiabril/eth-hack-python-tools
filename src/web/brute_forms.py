@@ -7,7 +7,7 @@ Script to perform a brute force attack on a web form.
 The application we are attacking is a wordpress site.
 We use a dictionary to brute force the password.
 
-Author: Rai
+Author: @raiabril
 """
 
 import requests
