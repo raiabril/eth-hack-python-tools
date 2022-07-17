@@ -14,16 +14,6 @@ import requests
 import smtplib
 
 
-def send_email(email, password, message):
-    """ Send an email with the URL of the tunnel"""
-    server = smtplib.SMTP("smtp.gmail.com", 587)
-    server.starttls()
-    server.login(email, password)
-    server.sendmail(email, email, message)
-    print(f"[+] Email sent to {email}")
-    server.quit()
-
-
 def main():
     try:
 
@@ -59,6 +49,16 @@ def main():
     # Send the tunnel url to my email account
     message = f"Subject: ngrok tunnel\n\n{tunnel_url}"
     send_email(email, password, message)
+
+
+def send_email(email, password, message):
+    """ Send an email with the URL of the tunnel"""
+    server = smtplib.SMTP("smtp.gmail.com", 587)
+    server.starttls()
+    server.login(email, password)
+    server.sendmail(email, email, message)
+    print(f"[+] Email sent to {email}")
+    server.quit()
 
 
 if '__main__' == __name__:
