@@ -1,3 +1,4 @@
+#!/usr/bin/sh
 iptables --flush
 iptables -I FORWARD -j NFQUEUE --queue-num 0
 iptables -I OUTPUT -j NFQUEUE --queue-num 0
