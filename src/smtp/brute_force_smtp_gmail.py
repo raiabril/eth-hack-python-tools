@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-brute_force_smtp.py - Brute force an smtp server.
+brute_force_smtp_gmail.py - Brute force a Gmail account.
 """
 
 import smtplib
