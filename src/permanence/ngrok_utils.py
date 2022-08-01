@@ -28,7 +28,7 @@ def get_tunnel_url():
         tunnel_url = requests.get("http://localhost:4040/api/tunnels").text
         tunnel_url = json.loads(tunnel_url)["tunnels"][0]["public_url"]
         return tunnel_url
-    except ConnectionError:
+    except requests.exceptions.ConnectionError:
         return None
 
 
@@ -37,5 +37,5 @@ def check_tunnel_active():
     try:
         tunnel_url = requests.get("http://localhost:4040/api/tunnels").status_code
         return True if tunnel_url == 200 else False
-    except ConnectionError:
+    except requests.exceptions.ConnectionError:
         return False
