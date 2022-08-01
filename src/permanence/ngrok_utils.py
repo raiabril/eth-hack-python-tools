@@ -10,12 +10,12 @@ import subprocess
 import json
 
 
-def start_ngrok_session():
+def start_ngrok_session(protocol="http", port="8080"):
     """ Start a ngrok session """
 
     try:
         subprocess.Popen(
-            ["ngrok", "http", "8080"], stdout=subprocess.PIPE)
+            ["ngrok", protocol, port], stdout=subprocess.PIPE)
 
     except Exception as e:
         print(e)
@@ -39,3 +39,12 @@ def check_tunnel_active():
         return True if tunnel_url == 200 else False
     except requests.exceptions.ConnectionError:
         return False
+
+def close_ngrok_session():
+    """ Close the ngrok session """
+    try:
+        subprocess.Popen(
+            ["pkill", "ngrok"], stdout=subprocess.PIPE)
+    except Exception as e:
+        print(e)
+        sys.exit()

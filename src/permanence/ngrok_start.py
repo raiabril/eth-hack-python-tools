@@ -28,7 +28,7 @@ def main():
             sys.exit()
 
         print("[+] Starting tunnel...")
-        ngrok_utils.start_ngrok_session()
+        ngrok_utils.start_ngrok_session("tcp","22")
         sleep(5)
     
 
