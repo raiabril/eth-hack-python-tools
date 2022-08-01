@@ -23,12 +23,18 @@ def start_ngrok_session():
 
 def get_tunnel_url():
     """ Get the tunnel URL from ngrok """
-    tunnel_url = requests.get("http://localhost:4040/api/tunnels").text
-    tunnel_url = json.loads(tunnel_url)["tunnels"][0]["public_url"]
-    return tunnel_url
+    try:
+        tunnel_url = requests.get("http://localhost:4040/api/tunnels").text
+        tunnel_url = json.loads(tunnel_url)["tunnels"][0]["public_url"]
+        return tunnel_url
+    except ConnectionError:
+        return None
 
 
 def check_tunnel_active():
     """ Check if the tunnel is active """
-    tunnel_url = requests.get("http://localhost:4040/api/tunnels").status_code
-    return True if tunnel_url == 200 else False
+    try:
+        tunnel_url = requests.get("http://localhost:4040/api/tunnels").status_code
+        return True if tunnel_url == 200 else False
+    except ConnectionError:
+        return False
