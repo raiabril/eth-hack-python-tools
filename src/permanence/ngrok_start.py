@@ -18,7 +18,6 @@ def main():
         print("[+] Tunnel is already active")
         sys.exit()
     else:
-        print("[+] Starting tunnel...")
         try:
 
             email = sys.argv[1]
@@ -28,6 +27,7 @@ def main():
             print("[-] Please provide your email and password")
             sys.exit()
 
+        print("[+] Starting tunnel...")
         ngrok_utils.start_ngrok_session()
         sleep(5)
     
