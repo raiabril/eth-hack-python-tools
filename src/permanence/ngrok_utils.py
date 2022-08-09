@@ -15,7 +15,7 @@ def start_ngrok_session(protocol="http", port="8080"):
 
     try:
         subprocess.Popen(
-            ["ngrok", protocol, port], stdout=subprocess.PIPE)
+            ["/usr/local/bin/ngrok", protocol, port], stdout=subprocess.PIPE)
 
     except Exception as e:
         print(e)

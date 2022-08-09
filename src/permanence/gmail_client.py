@@ -6,6 +6,8 @@ Author: @raiabril
 """
 
 import smtplib
+from datetime import datetime
+
 
 def send_email(email, password, message):
     """ Send an email with the URL of the tunnel"""
@@ -13,5 +15,5 @@ def send_email(email, password, message):
     server.starttls()
     server.login(email, password)
     server.sendmail(email, email, message)
-    print(f"[+] Email sent to {email}")
     server.quit()
+    return True
