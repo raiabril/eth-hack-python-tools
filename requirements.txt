@@ -12,3 +12,5 @@ scapy_http
 pyfiglet
 pyjwt[crypto]
 pyshorteners
+websockets
+scapy
