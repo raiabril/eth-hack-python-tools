@@ -5,7 +5,7 @@ test_arp_spoofing.py - Test ARP Spoofing module
 """
 
 import unittest
-import arp_spoofing as arp_spoofing
+from src import arp_spoofing as arp_spoofing
 
 
 class UnitTests(unittest.TestCase):
