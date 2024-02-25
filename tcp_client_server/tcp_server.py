@@ -24,7 +24,7 @@ server_socket.listen(3)
 while True:
     # Recevied connection
     client_socket, address = server_socket.accept()
-    print(f"[+] Recevied connection from {address}")
+    print(f"[+] Received connection from {address}")
 
     # Send message
     message = "Hello, thank you for connecting to the server."
