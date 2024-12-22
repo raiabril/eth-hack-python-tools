@@ -1,0 +1,6 @@
+termcolor
+autopep8
+flake8
+ua-parser
+user-agents
+pandas
